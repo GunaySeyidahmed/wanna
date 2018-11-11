@@ -1,0 +1,26 @@
+.header-section{
+  display: flex;
+  justify-content: center;
+  .navbar{
+    position: absolute;
+    width: 100%;
+    padding: 8px 35px;
+  }
+  .fixed-nav{
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $whiteColor !important;
+  }
+  .logo{
+    display: none;
+  }
+  .logo-fixed{
+    display: inline-block !important;
+  }
+  .black-text{
+    color: $blackColor;
+  }
+}
