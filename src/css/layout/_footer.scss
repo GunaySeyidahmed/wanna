@@ -1,17 +1,18 @@
 .footer-section{
-  .footer-links{
-    .footer-title {
+    .footer-links{
+      .footer-title {
         font-size:1.8rem;
-    }
+      }
       .links{
         li{
           margin-bottom: 1px;
+          transition: all 7s !important;
           a{
             position: relative;
             color: $lightGrayColor;
             font-size: 1.6rem;
             text-decoration: none;
-            transition: all 3s ease-in-out;
+            transition: all 7s !important;
             &:before{
               font-family: "FontAwesome";
               content: '\f178';
@@ -22,9 +23,11 @@
               font-weight: lighter;
               color:$blueColor;
               display: none;
+              transition: all .4s ease-in-out !important;
             }
             &:hover{
-              transform: translate(5px,0);
+              transition: all .5s !important;
+              left: 8px !important;
               &:before{
                 display: block;
               }
@@ -32,42 +35,86 @@
           }
         }
       }
-    .footer-contact{
+      .footer-contact{
+        max-width: 76%;
         li{
-          font-size: 1.4rem;
-          margin-bottom: 2px;
+          font-size: 1.6rem;
+          margin-bottom: 4px;
+          color: $lightGrayColor;
+          display: flex;
+          align-items: center;
           i{
-            margin-right: 5px;
+            font-size: 2rem;
+            margin-right: 8px;
             color: $blueColor;
+            font-weight: lighter;
+            float: left;
+          }
+          span  {
+            display: block;
+          }
+          a{
+            color: $lightGrayColor;
+            &:hover{
+              text-decoration: none;
+            }
           }
         }
       }
-    .footer-social{
-      .form-control{
-        background-color: #eef3f7;
-        padding: 1rem 0.75rem;
-        font-size: 1.4rem;
-        line-height: 0.5;
-        color: red !important;
-        border: 1px solid #d2d8dd;
-        border-radius: 0.25rem;
-        &:focus{
-          color: #495057;
-          outline: 0;
-          box-shadow: none !important;
+      .footer-subscribe{
+        .form-control{
+          background-color: #eef3f7;
+          padding: 1rem 0.75rem;
+          font-size: 1.5rem;
+          line-height: 0.5;
+          color: $lightGrayColor !important;
+          border: 1px solid #d2d8dd;
+          border-radius: 0.25rem;
+          &:focus{
+            color: #495057;
+            outline: 0;
+            box-shadow: none !important;
+          }
+        }
+        button{
+          &.btn{
+            font-weight: bolder;
+            padding: 1rem !important;
+            font-size: 1.4rem;
+            &:focus{
+              box-shadow: none !important;
+              outline: none !important;
+            }
+          }
         }
       }
-       button{
-        &.btn{
-          font-weight: bolder;
-          padding: 1rem 1.55rem;
-          font-size: 1.4rem;
-          &:focus{
-            box-shadow: none !important;
-            outline: none !important;
+      .footer-social-icons{
+        .social-icons{
+          i{
+            color: $lightGrayColor;
+            font-size: 2.2rem;
+            opacity: .6;
+            &:hover{
+              color: $blueColor;
+              opacity: 1;
+            }
           }
         }
       }
     }
-  }
+    .scroll-up{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.6);
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      text-align: center;
+      line-height: 40px;
+      i{
+        color: $whiteColor;
+        font-size: 2.2rem;
+      }
+    }
 }

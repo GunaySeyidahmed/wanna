@@ -13,6 +13,7 @@
     top: 0;
     width: 100%;
     background-color: $whiteColor !important;
+    transition: all .4s !important;
   }
   .logo{
     display: none;
@@ -22,5 +23,33 @@
   }
   .black-text{
     color: $blackColor;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar{
+    padding: 5px !important;
+  }
+ .navbar-toggler{
+   order: -1 !important;
+ }
+  .navbar-collapse{
+    z-index: 9999 !important;
+    height: 100vh;
+    background: $whiteColor !important;
+    .nav-item{
+      .nav-link{
+        font-size: 2rem;
+      }
+    }
+    .comments{
+      margin-bottom: 10px;
+    }
+    .login{
+      display: none !important;
+    }
+  }
+  .login-item{
+    display: block !important;
   }
 }

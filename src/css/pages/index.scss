@@ -210,13 +210,12 @@
         align-items: center;
         .cat-result{
           color: $grayColor;
-          font-weight: bolder;
          strong{
-           color: $lightGrayColor !important;
+           color: $gray7Color !important;
          }
         }
         .cat-comment{
-          color: $lightGrayColor !important;
+          color: $gray7Color !important;
           i{
             font-size: 1.4rem;
             margin-left: 2px;
@@ -257,11 +256,27 @@
   }
 }
 @media (max-width: 568px) {
-
   .review{
       width: 400px !important;
       display: block !important;
       margin: auto !important;
+  }
+  .banner-title{
+    font-size: 3rem !important;
+  }
+  .section-subtitle{
+    font-size: 1.4rem!important;
+    flex-direction: column !important;
+  }
+  .footer-links{
+    text-align: center !important;
+    margin-bottom: 25px !important;
+  }
+  .footer-contact{
+    max-width: 100% !important;
+    li{
+      justify-content: center !important;
+    }
   }
 }
 

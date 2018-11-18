@@ -5,18 +5,21 @@ $( document ).ready(function() {
         var navImgLogo=$('.header-section .navbar-brand #logo-1');
         var navImgFixed=$('.header-section .navbar-brand #logo-2');
         var navLink=$('.header-section .nav-item a');
+        var loginItem=$('.header-section nav .login-item i');
         console.log(navLink);
         if($(this).scrollTop()>70){
             fixedNav.addClass('fixed-nav');
             navImgLogo.addClass('logo');
             navImgFixed.removeClass('d-none').addClass('logo-fixed');
             navLink.removeClass('white-text').addClass('black-text');
+            loginItem.css('color','#444');
         }
         else {
             fixedNav.removeClass('fixed-nav');
             navImgLogo.removeClass('logo');
             navImgFixed.addClass('d-none').removeClass('logo-fixed');
             navLink.removeClass('black-text').addClass('white-text');
+            loginItem.css('color','white');
         }
     });
     $('.reviews').slick({
@@ -57,5 +60,17 @@ $( document ).ready(function() {
                 }
             }
         ]
+    });
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 250) {
+            $('.scroll-up').fadeIn("slow").css("display", "block");
+        } else {
+            $('.scroll-up').fadeOut("slow").css("display", "none");
+        }
+    });
+    $(".scroll-up").click(function (event) {
+        event.preventDefault();
+        $("html, body").animate({scrollTop: 0}, "slow");
+        return false;
     });
 });

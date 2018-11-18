@@ -24,6 +24,9 @@
 .ml-20{
   padding: 0 10px;
 }
+.mt-10{
+  margin-top: 10px;
+}
 .comments{
   background-color: $blueColor;
   color: $whiteColor !important;
@@ -115,4 +118,10 @@ font-size: 1.8rem !important;
 }
 .gray-text{
   color: $grayColor;
+}
+.login-item{
+  display: none;
+}
+.white-bg{
+  background-color: $whiteColor !important;
 }
