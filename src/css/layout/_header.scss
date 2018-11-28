@@ -1,6 +1,9 @@
 .header-section{
   display: flex;
   justify-content: center;
+  .navbar-nav{
+    align-items: center;
+  }
   .navbar{
     position: absolute;
     width: 100%;

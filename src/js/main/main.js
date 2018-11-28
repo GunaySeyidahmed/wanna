@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
     $(window).scroll(function () {
         var fixedNav=$('.header-section nav');
         var navImgLogo=$('.header-section .navbar-brand #logo-1');
@@ -31,6 +30,7 @@ $( document ).ready(function() {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        fadeIn:true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -72,5 +72,13 @@ $( document ).ready(function() {
         event.preventDefault();
         $("html, body").animate({scrollTop: 0}, "slow");
         return false;
+    });
+    $(window).scroll(function () {
+        // console.log($(this).scrollTop());
+        if ($(this).scrollTop() > 392) {
+            $('.scale-f').fadeIn("slow").addClass('animation-button');
+        } else {
+            $('.scale-f').fadeOut("slow").removeClass('animation-button');
+        }
     });
 });

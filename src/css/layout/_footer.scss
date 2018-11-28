@@ -4,15 +4,18 @@
         font-size:1.8rem;
       }
       .links{
+        display: flex;
+        flex-direction: column;
         li{
           margin-bottom: 1px;
-          transition: all 7s !important;
+          margin-left: 0;
+          transition: margin-left .3s;
           a{
             position: relative;
+            display: inline-block;
             color: $lightGrayColor;
             font-size: 1.6rem;
             text-decoration: none;
-            transition: all 7s !important;
             &:before{
               font-family: "FontAwesome";
               content: '\f178';
@@ -21,16 +24,18 @@
               right: -20px;
               font-size: 1.2rem;
               font-weight: lighter;
-              color:$blueColor;
-              display: none;
-              transition: all .4s ease-in-out !important;
+              color:transparent;
+              opacity: 0;
+              transition: ease-in-out .3s;
             }
-            &:hover{
-              transition: all .5s !important;
-              left: 8px !important;
-              &:before{
-                display: block;
-              }
+          }
+          &:hover{
+            margin-left: 8px;
+            a{
+                &:before{
+                  opacity: 1;
+                  color: $blueColor;
+                }
             }
           }
         }
@@ -94,6 +99,7 @@
             color: $lightGrayColor;
             font-size: 2.2rem;
             opacity: .6;
+            transition: ease-in-out .3s;
             &:hover{
               color: $blueColor;
               opacity: 1;

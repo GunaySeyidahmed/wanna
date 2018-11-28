@@ -225,7 +225,7 @@
       &:hover{
         text-decoration: none;
         img{
-          transform: rotateY(360deg);
+          animation: rotateY .8s;
         }
       }
     }
